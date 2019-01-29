@@ -1,4 +1,3 @@
-const fs = require('fs');
 const { setWorldConstructor, setDefaultTimeout } = require('cucumber');
 const { Builder, Capabilities } = require('selenium-webdriver');
 require('chromedriver');
