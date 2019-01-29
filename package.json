@@ -1,0 +1,21 @@
+{
+  "name": "qa-devintest-application",
+  "version": "1.0.0",
+  "description": "Application for accessing DevInTest candidates",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EconomistDigitalSolutions/QA-DevInTest-Application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EconomistDigitalSolutions/QA-DevInTest-Application/issues"
+  },
+  "homepage": "https://github.com/EconomistDigitalSolutions/QA-DevInTest-Application#readme"
+}
