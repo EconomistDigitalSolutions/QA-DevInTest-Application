@@ -12,6 +12,7 @@ We need you to create an integration test suite for https://jobs.economist.com/ 
 2. Document assumptions (if necessary).
 3. Implement test suite from the user stories mentioned below.
 4. Further document and comment as much as you feel necessary. Ensure your code is clean and readable.
+5. Pull request your fork back into this repository and send the link to us
 
 ## The Scenario
 We have a jobs site for advertising various career opportunities at The Economist. We'd like you to write an automated test suite to ensure that some features have been developed properly.
