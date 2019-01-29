@@ -15,7 +15,7 @@ We need you to create an integration test suite for https://jobs.economist.com/ 
 5. Pull request your fork back into this repository and send the link to us
 
 ## The Scenario
-We have a jobs site for advertising various career opportunities at The Economist. We'd like you to write an automated test suite to ensure that some features have been developed properly.
+We have a jobs site (https://jobs.economist.com) for advertising various career opportunities at The Economist. We'd like you to write an automated test suite to ensure that some features have been developed properly.
 
 ### The Features
 The following are a list of criteria we would like tested. It is your job to break these down further into cucumber scenarios and steps:
