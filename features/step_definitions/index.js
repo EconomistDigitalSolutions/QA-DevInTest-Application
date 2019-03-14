@@ -14,14 +14,14 @@ Then('I should see the {string}', async function (element) {
 });
 
 // jobsPageLinks should be updated whenever the test
-// "'Sign in' and 'Create account' links go to correct pages." examples change.
+// "Check that links on the jobs page go to correct pages." examples change.
 When('I click on {string}', async function (link) {
   let linkToClick = await World.driver.findElement(By.css(mappings.jobsPageLinks.get(link)))
   linkToClick.click()
 });
 
 // pageTitles should be updated whenever the test
-// "'Sign in' and 'Create account' links go to correct pages." examples change.
+// "Check that links on the jobs page go to correct pages." examples change.
 Then('I should see the {string} page', async function (page) {
   let pageTitle = await World.driver.getTitle();
   assert(pageTitle.startsWith(mappings.pageTitles.get(page)));

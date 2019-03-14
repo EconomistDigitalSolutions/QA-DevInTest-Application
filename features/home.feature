@@ -12,7 +12,7 @@ Scenario Outline: Jobs page components check.
   | "featured jobs" |
   | "footer" |
 
-Scenario Outline: 'Sign in' and 'Create account' links go to correct pages.
+Scenario Outline: Check that links on the jobs page go to correct pages.
   Given I go to the jobs page
   When I click on <link>
   Then I should see the <page> page
@@ -25,4 +25,3 @@ Scenario Outline: 'Sign in' and 'Create account' links go to correct pages.
   | "Job alerts"        | "Job alerts"  |
   | "Search recruiters" | "Search recruiters"  |
   | "Jobs blog"         | "Jobs blog" |
-  
