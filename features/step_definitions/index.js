@@ -24,5 +24,5 @@ When('I click on {string}', async function (link) {
 // "'Sign in' and 'Create account' links go to correct pages." examples change.
 Then('I should see the {string} page', async function (page) {
   let pageTitle = await World.driver.getTitle();
-  assert.equal(pageTitle,mappings.pageTitles.get(page));
+  assert(pageTitle.startsWith(mappings.pageTitles.get(page)));
 });

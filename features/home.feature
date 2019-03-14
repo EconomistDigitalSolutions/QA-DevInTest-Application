@@ -17,6 +17,12 @@ Scenario Outline: 'Sign in' and 'Create account' links go to correct pages.
   When I click on <link>
   Then I should see the <page> page
   Examples:
-  | link              | page |
-  | "Sign in"         | "Sign in" |
-  | "Create account"  | "Create account"  |
+  | link                | page |
+  | "Sign in"           | "Sign in" |
+  | "Create account"    | "Create account"  |
+  | "Home"              | "Home"  |
+  | "Find a job"        | "Find a job"  |
+  | "Job alerts"        | "Job alerts"  |
+  | "Search recruiters" | "Search recruiters"  |
+  | "Jobs blog"         | "Jobs blog" |
+  
