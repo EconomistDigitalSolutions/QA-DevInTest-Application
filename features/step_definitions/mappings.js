@@ -15,6 +15,7 @@ jobsPageLinks.set('Home', '.primary-nav__item--home a')
 jobsPageLinks.set('Find a job', '.primary-nav__item--find-a-job a')
 jobsPageLinks.set('Job alerts', '.primary-nav__item--jbe a')
 jobsPageLinks.set('Search recruiters', '.primary-nav__item--recruiters a')
+jobsPageLinks.set('Jobs blog', '.primary-nav__item--careers-advice a')
 jobsPageLinks.set('Banking and finance', '.facet-links__link--banking-and-finance a')
 
 // A mapping between links and page titles where links should point to.

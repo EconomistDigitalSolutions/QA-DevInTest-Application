@@ -1,7 +1,9 @@
 Feature: Jobs page
 
-Scenario Outline: Jobs page components check.
+Background:
   Given I go to the jobs page
+
+Scenario Outline: Jobs page components check.
   Then I should see the <element>
   Examples:
   | element |
@@ -13,7 +15,6 @@ Scenario Outline: Jobs page components check.
   | "footer" |
 
 Scenario Outline: Check that links on the jobs page go to correct pages.
-  Given I go to the jobs page
   When I click on <link>
   Then I should see the <page> page
   Examples:
