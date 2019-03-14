@@ -11,3 +11,7 @@ Then(/^I should see the navigation bar$/, async () => {
 Then(/^I should see the search fields$/, async () => {
   return World.driver.findElement(By.className('search'));
 })
+
+Then(/^I should see the sector lists$/, async () => {
+  return World.driver.findElement(By.className('browse'));
+})
