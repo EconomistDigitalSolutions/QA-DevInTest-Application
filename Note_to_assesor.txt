@@ -1,0 +1,19 @@
+Hello,
+
+For background info, when I applied for this position, it was based on the keywords Python and Selenium Webdriver. My knowledge of JS is basic and comes from an online tutorial and I have never seen Cucumber code before (even though it was on my list of things to learn). Therefore, when I saw that the task was all in JS/Cucumber I was hesitant to do it as I thought that I would be out of my depth. However, the challenge was too intriguing so I spent a day or so learning JS and Cucumber, then I gave the task a try. This meant that I was left with just under 1 day to do the task.
+
+I didn't have a chance to read about JS/Cucumber conventions or best practices. If you find any beginners' mistakes, you know why :)
+
+Having said that, I enjoyed doing the assesment and whatever the outcome of your review I
+would greatly appreciate your feedback as it is an area that I am interested in learning.
+
+Kind regards,
+
+Ammar Al-Taweel
+
+
+Assumptions:
+- Links leading outside the site are not tested.
+- There is an external tool that tracks the requirements and links each requirement to the test(s) that verify it.
+- The requirement for "Clicking on a sector shows a list of jobs from only that sector." was not very clear. Individual jobs didn't have sector indicators attached to them. I am assuming that the page title is sufficient to show that we are showing the right jobs for the sector.
+ 
