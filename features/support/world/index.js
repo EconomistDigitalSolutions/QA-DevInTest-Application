@@ -24,6 +24,10 @@ class CustomWorld {
     return this.driver.get(BASE_URL);
   }
 
+  goToJobsSubPage(s) {
+    return this.driver.get(BASE_URL+'/'+s);
+  }
+
   start() {
     this.driver = buildDriver();
   }
