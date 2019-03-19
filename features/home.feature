@@ -42,3 +42,8 @@ Scenario Outline: Check that links on the jobs page's footer go to correct pages
   | "Terms & Conditions"  | "Terms & Conditions"  |
   | "Privacy Policy"      | "Privacy Policy"  |
   | "Advertise with us"   | "Advertise with us"  |
+
+Scenario: Search for a job on the home page
+  When I enter "Director" in the search box
+  And I click on the Search button
+  Then relevant search results are displayed
