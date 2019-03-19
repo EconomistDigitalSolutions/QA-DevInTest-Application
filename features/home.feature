@@ -33,5 +33,9 @@ Scenario Outline: Check that links on the jobs page's footer go to correct pages
   When I click on footer link <link>
   Then I should see the <page> page
   Examples:
-  | link                  | page |
-  | "About Us"            | "About Us" |
+  | link                  | page          |
+  | "About Us"            | "About Us"    |
+  | "Contact Us"          | "Contact Us"  |
+  | "Terms & Conditions"  | "Terms & Conditions"  |
+  | "Privacy Policy"      | "Privacy Policy"  |
+  | "Advertise with us"   | "Advertise with us"  |
