@@ -29,6 +29,11 @@ pageTitles.set('Search recruiters','Recruiters on Jobs.Economist.com')
 pageTitles.set('Jobs blog','Articles and careers information on Jobs.Economist.com')
 pageTitles.set('Banking and finance','Banking and finance jobs')
 
+var pageUrl = new Map()
+pageUrl.set('Banking and finance sector jobs', 'jobs/banking-and-finance')
+
+
 exports.jobsPageVisibleElementsMap = jobsPageVisibleElementsMap
 exports.jobsPageLinks = jobsPageLinks
 exports.pageTitles = pageTitles
+exports.pageUrl = pageUrl
