@@ -3,6 +3,9 @@ Feature: Jobs page
 Background:
   Given I go to the jobs page
 
+Scenario: Jobs page renders correctly
+  Then I should see the "Home" page
+
 Scenario Outline: Jobs page components check.
   Then I should see the <element>
   Examples:
