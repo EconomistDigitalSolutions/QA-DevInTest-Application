@@ -52,7 +52,15 @@ When('I click on the {string} job from the list', async function (job) {
   await jobs[index].findElement(By.tagName('a')).click();
 });
 
-Then('the job\'s details should be displayed', async function(){
+Then('the correct job should be displayed', async function(){
   let jobTitle = await World.driver.findElement(By.css('.js-job-detail h1')).getText();
   assert(jobTitle.startsWith(testContext.get('job title')))
 });
+
+Then('the job\'s details should be displayed', async function(){
+  assert(await World.driver.findElement(By.className('job-description')).isDisplayed());
+})
+
+Then('an apply button should be visible', async function(){
+  assert(await World.driver.findElement(By.className('button--apply')).isDisplayed());
+})
