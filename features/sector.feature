@@ -7,3 +7,5 @@ Scenario Outline: Check that job links on a job sector's page work correctly
   Examples:
   | page                                | jobNo   |
   | "Banking and finance sector jobs"   | "1st"   |
+  | "Banking and finance sector jobs"   | "2nd"   |
+  | "Banking and finance sector jobs"   | "last"  |

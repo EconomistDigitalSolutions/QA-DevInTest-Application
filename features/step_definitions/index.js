@@ -33,11 +33,23 @@ Given('I go to the {string} page', async function(page){
 
 When('I click on the {string} job from the list', async function (job) {
   let jobs = await World.driver.findElements(By.className('lister__header'))
-  if (job === "1st"){
-    // Save the job title
-    testContext.set('job title',await jobs[0].getText());
-    await jobs[0].findElement(By.tagName('a')).click();
+  var index = 0
+  switch(job){
+    case "1st":
+      index = 0;
+      break;
+    case "2nd":
+      index = 1;
+      break;
+    case "last":
+      index = jobs.length - 1;
+      break;
+    default:
+      index = 0
   }
+  // Save the job title
+  testContext.set('job title', await jobs[index].getText());
+  await jobs[index].findElement(By.tagName('a')).click();
 });
 
 Then('the job\'s details should be displayed', async function(){
