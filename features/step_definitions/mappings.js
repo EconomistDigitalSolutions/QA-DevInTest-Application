@@ -18,6 +18,7 @@ jobsPageLinks.set('Search recruiters', '.primary-nav__item--recruiters a')
 jobsPageLinks.set('Jobs blog', '.primary-nav__item--careers-advice a')
 jobsPageLinks.set('Banking and finance', '.facet-links__link--banking-and-finance a')
 
+
 // A mapping between links and page titles where links should point to.
 var pageTitles = new Map()
 pageTitles.set('Sign in', 'Logon | Jobs.Economist.com')
@@ -28,6 +29,7 @@ pageTitles.set('Job alerts','New Job By Email | Jobs.Economist.com')
 pageTitles.set('Search recruiters','Recruiters on Jobs.Economist.com')
 pageTitles.set('Jobs blog','Articles and careers information on Jobs.Economist.com')
 pageTitles.set('Banking and finance','Banking and finance jobs')
+pageTitles.set('About Us','The Economist jobs board | About Us')
 
 var pageUrl = new Map()
 pageUrl.set('Banking and finance sector jobs', 'jobs/banking-and-finance')

@@ -27,3 +27,11 @@ Scenario Outline: Check that links on the jobs page go to correct pages.
   | "Search recruiters"   | "Search recruiters"  |
   | "Jobs blog"           | "Jobs blog" |
   | "Banking and finance" | "Banking and finance" |
+
+
+Scenario Outline: Check that links on the jobs page's footer go to correct pages.
+  When I click on footer link <link>
+  Then I should see the <page> page
+  Examples:
+  | link                  | page |
+  | "About Us"            | "About Us" |

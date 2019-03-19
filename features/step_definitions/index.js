@@ -20,8 +20,10 @@ When('I click on {string}', async function (link) {
   linkToClick.click()
 });
 
-// pageTitles should be updated whenever the test
-// "Check that links on the jobs page go to correct pages." examples change.
+// Whenever the test examples change for tests:
+//    "Check that links on the jobs page go to correct pages."
+//    "Check that links on the jobs page's footer go to correct pages."
+// the 'pageTitles' map should be updated.
 Then('I should see the {string} page', async function (page) {
   let pageTitle = await World.driver.getTitle();
   assert(pageTitle.startsWith(mappings.pageTitles.get(page)));
@@ -63,4 +65,18 @@ Then('the job\'s details should be displayed', async function(){
 
 Then('an apply button should be visible', async function(){
   assert(await World.driver.findElement(By.className('button--apply')).isDisplayed());
+})
+
+When('I click on footer link {string}', async function(link){
+  // No unique identifier exists for each element in the footer, therefore
+  // we need to use link text for finding the right link.
+  var navItems = await World.driver.findElements(By.css('.tertiary-nav__item a'))
+  for (let item of navItems){
+    var itemText = await item.getText()
+    if(itemText===link){
+      await item.click()
+      return
+    }
+  }
+  assert(false)
 })
