@@ -6,6 +6,7 @@
   "dependencies": {
     "chromedriver": "^2.45.0",
     "cucumber": "^5.1.0",
+    "eslint": "^5.15.3",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {},
