@@ -80,3 +80,17 @@ When('I click on footer link {string}', async function(link){
   }
   assert(false)
 })
+
+When('I enter "Director" in the search box', async function(){
+  await World.driver.findElement(By.id('keywords')).sendKeys('Director')
+  testContext.set('search keyword', 'Director')
+})
+
+When('I click on the Search button', async function(){
+  await World.driver.findElement(By.css('.submit input')).click()
+})
+
+Then('relevant search results are displayed', async function(){
+  let searchResult = await World.driver.findElement(By.id('searching')).getText()
+  assert.notEqual(searchResult.search(testContext.get('search keyword')), -1)
+})
