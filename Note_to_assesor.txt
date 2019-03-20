@@ -3,6 +3,10 @@ The script for the hook was from:
 https://gist.github.com/rashtay/328da46a99a9d7c746636df1cf769675
 So credit goes to @Rashty for that.
 
+I also tried adding tags to allow selective running of tests but that didn't work (possibly due
+to the way the tests are run). It would be useful in the future to try to get hat functionality 
+working. (tags removed for now).
+
 
 #Hello,
 
