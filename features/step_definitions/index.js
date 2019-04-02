@@ -1,4 +1,4 @@
-const { Given, Then } = require('cucumber');
+const { Given, When, Then } = require('cucumber');
 const { By } = require('selenium-webdriver');
 const World = require('../support/world');
 
@@ -34,12 +34,15 @@ Then('I should see the footer', async () => {
         return World.driver.findElement(By.css('footer'));
       });
 
-Given('I click on sign in', async () => {
-              // Write code here that turns the phrase above into concrete actions
-              return World.driver.findElement(By.id(''));
-            });
+When('I click sign in', async () => {
+      // Write code here that turns the phrase above into concrete actions
+      return World.driver.findElement(By.css('#secondary-nav > ul > li.togglable-nav__item.secondary-nav__item.secondary-nav--jobseekers.jobseekers.jobseekers-nav > ul > li.togglable-nav__item.jobseekers__item.jobseekers__item--sign-in > a')).click();
+    });
 
-Then('I should see login page', async () => {
-              // Write code here that turns the phrase above into concrete actions
-                  return 'pending';
-               });
+Then('I should see login page', function () {
+            // Write code here that turns the phrase above into concrete actions
+            return World.driver.findElement(By.css('#main > div > div > div.grid-item.five-sixths.lap-one-whole.palm-one-whole > div > div:nth-child(1) > h1'));
+          });
+
+
+               // <a href="/logon/">Sign in</a>

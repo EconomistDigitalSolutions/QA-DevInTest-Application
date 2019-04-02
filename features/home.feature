@@ -25,5 +25,6 @@ Feature: Jobs page
     Then I should see the footer
 
   Scenario: Sign in link
-    Given I click on sign in
+    Given I go to the jobs page
+    When I click sign in
     Then I should see login page
