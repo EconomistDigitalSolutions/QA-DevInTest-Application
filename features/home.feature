@@ -28,3 +28,8 @@ Feature: Jobs page
     Given I go to the jobs page
     When I click sign in
     Then I should see login page
+
+  Scenario: Create an Account link
+    Given I go to the jobs page
+    When I click Create an Account
+    Then I should see create account page

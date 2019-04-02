@@ -44,5 +44,13 @@ Then('I should see login page', function () {
             return World.driver.findElement(By.css('#main > div > div > div.grid-item.five-sixths.lap-one-whole.palm-one-whole > div > div:nth-child(1) > h1'));
           });
 
+When('I click Create an Account', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return World.driver.findElement(By.css('#secondary-nav > ul > li.togglable-nav__item.secondary-nav__item.secondary-nav--jobseekers.jobseekers.jobseekers-nav > ul > li.togglable-nav__item.togglable-nav__item--last.jobseekers__item.jobseekers__item--create-account > a')).click();
+          });
 
+Then('I should see create account page', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return World.driver.findElement(By.id('create-account'));
+        });
                // <a href="/logon/">Sign in</a>
