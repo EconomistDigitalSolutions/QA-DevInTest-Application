@@ -53,4 +53,3 @@ Then('I should see create account page', function () {
            // Write code here that turns the phrase above into concrete actions
            return World.driver.findElement(By.id('create-account'));
         });
-               // <a href="/logon/">Sign in</a>
