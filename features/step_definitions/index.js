@@ -1,7 +1,9 @@
 const { Given, When, Then } = require("cucumber");
-const { By } = require("selenium-webdriver");
+const { By, until} = require("selenium-webdriver");
 const World = require("../support/world");
 const assert = require("assert");
+
+
 
 
 $HOME = "https://jobs.economist.com/";
@@ -126,7 +128,7 @@ When('I click Jobs blog', async () => {
 });
 
 Then('Redirects to Jobs blog', async () => {
-  await World.driver.getCurrentUrl().then(function(url){
+   World.driver.getCurrentUrl().then(function(url){
      assert.equal(url, $JOBS_BLOG);
   });
 });
@@ -143,7 +145,7 @@ Then('I should see jobs from that sector', async () => {
 });
 
 When('I click on a job', async () => {
-   await World.driver.findElement({xpath: "//*[@id='item-21459']/div[1]"}).click();
+  World.driver.findElement({linkText: "View details"}).click();
 });
 
 Then('I should see job details', async () => {
@@ -182,4 +184,67 @@ var keyword = World.driver.findElement(By.id("searching")).getText();
         console.log("Failed!!");
       }
     });
+});
+
+
+//Footer links
+When('I click on About us', async () => {
+ // Write code here that turns the phrase above into concrete actions
+ await World.driver.findElement({linkText: "About Us"}).click();
+});
+
+Then('Redirect to About us', async () => {
+ // Write code here that turns the phrase above into concrete actions
+ await World.driver.getCurrentUrl().then(function(url){
+    assert.equal(url, "https://jobs.economist.com/about-us/");
+ });
+});
+
+When('I click on Contact us', async () => {
+ // Write code here that turns the phrase above into concrete actions
+ return await World.driver.findElement({linkText: "Contact Us"}).click();
+});
+
+Then('Redirect to Contact us', async () => {
+ // Write code here that turns the phrase above into concrete actions
+ await World.driver.getCurrentUrl().then(function(url){
+    assert.equal(url, "https://jobs.economist.com/contact-us/");
+ });
+});
+
+When('I click on Terms and conditions', async () => {
+ // Write code here that turns the phrase above into concrete actions
+ return await World.driver.findElement({linkText: "Terms & Conditions"}).click();
+});
+
+Then('Redirect to Terms and conditions', async () => {
+ // Write code here that turns the phrase above into concrete actions
+ await World.driver.getCurrentUrl().then(function(url){
+    assert.equal(url, "https://jobs.economist.com/terms-and-conditions/");
+ });
+});
+
+When('I click on Privacy policy', async () => {
+ // Write code here that turns the phrase above into concrete actions
+ return await World.driver.findElement({linkText: "Privacy Policy"}).click();
+
+});
+
+Then('Redirect to Privacy policy', async () => {
+ // Write code here that turns the phrase above into concrete actions
+ await World.driver.getCurrentUrl().then(function(url){
+    assert.equal(url, "https://jobs.economist.com/privacy-policy/");
+ });
+});
+
+When('I click on Advertise with us', async () =>{
+ // Write code here that turns the phrase above into concrete actions
+ await World.driver.findElement({linkText: "Advertise with us"}).click();
+});
+
+Then('Redirect to Advertise with us', async () =>{
+ // Write code here that turns the phrase above into concrete actions
+ await World.driver.getCurrentUrl().then(function(url){
+    assert.equal(url, "https://recruiters.jobs.economist.com/");
+ });
 });
