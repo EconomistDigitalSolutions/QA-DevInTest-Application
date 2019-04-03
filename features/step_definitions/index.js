@@ -73,24 +73,9 @@ Then('Redirects to home page', async () => {
    // assert.equal(World.driver.getCurrentUrl(), $HOME);
    // String CurrentUrl = World.driver.getCurrentUrl();
    // World.driver.wait(1000*3);
-     await World.driver.getCurrentUrl().then(function(url){
-       assert.equal(url, $HOME);
-});
-   // World.driver.getCurrentUrl().then(url => {console.log('current url: "' + url + '"');});
-   // var currentUrl = World.driver.getCurrentUrl().toString();
-
-   // assert.equal(currentUrl, "https://jobs.economist.com");
-   // var gettingCurrent = World.driver.getCurrentUrl();
-   // assert.equal(gettingCurrent, $HOME);
-//
-//    var currentUrl;
-//
-//   World.driver.getCurrentUrl().then(function () {
-//   assert.equal(currentUrl, $HOME);
-// });
-
-// String URL = World.driver.getCurrentUrl();
-// Assert.assertEquals(URL, "https://jobs.economist.com/" );
+   await World.driver.getCurrentUrl().then(function(url){
+     assert.equal(url, $HOME);
+     });
 });
 
 When('I click Find a job', async () => {
@@ -110,7 +95,7 @@ When('I click Job alerts', async () => {
 Then('Redirects to Job alerts page', async () => {
   await World.driver.getCurrentUrl().then(function(url){
      assert.equal(url, $JOB_ALERT);
-});
+   });
 });
 
 When('I click Search recruiters', async () => {
