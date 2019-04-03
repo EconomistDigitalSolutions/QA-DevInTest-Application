@@ -10,32 +10,43 @@ $JOB_ALERT = "https://jobs.economist.com/newalert/";
 $SEARCH_RECTRUITER = "https://jobs.economist.com/employers/";
 $JOBS_BLOG = "https://jobs.economist.com/careers/";
 
-Given(/^I go to the jobs page$/, () => World.goToJobsPage());
+$NAV = "primary-nav";
+$SEARCH_FIELD = "keywords";
+$SECTOR_LIST = "browse__items";
+$JOBS_BLOG = "articles";
+$FEATURED_JOBS = "featured-jobs__item";
+$FOOTER = "footer";
 
+
+//Page rendering
+
+Given(/^I go to the jobs page$/, () => World.goToJobsPage());
+//if elements are found by selenium means they exist/rendered
 Then(/^I should see the navigation bar$/, async () => {
-  return World.driver.findElement(By.id('primary-nav'));
+  return World.driver.findElement(By.id($NAV));
 });
 
 Then('I should see search fields', async () => {
-  return World.driver.findElement(By.id('keywords'));
+  return World.driver.findElement(By.id($SEARCH_FIELD));
 });
 
 Then('I should see sector lists', async () => {
-  return World.driver.findElement(By.className('browse__items'));
+  return World.driver.findElement(By.className($SECTOR_LIST));
 });
 
 Then('I should see jobs blog', async () => {
-  return World.driver.findElement(By.className('articles'));
+  return World.driver.findElement(By.className($JOBS_BLOG));
 });
 
 Then('I should see featured jobs', async () => {
-  return World.driver.findElement(By.className('featured-jobs__item'));
+  return World.driver.findElement(By.className($FEATURED_JOBS));
 });
 
 Then('I should see the footer', async () => {
-  return World.driver.findElement(By.css('footer'));
+  return World.driver.findElement(By.css($FOOTER));
 });
 
+//Account links
 When('I click sign in', async () => {
   return World.driver.findElement(By.css('#secondary-nav > ul > li.togglable-nav__item.secondary-nav__item.secondary-nav--jobseekers.jobseekers.jobseekers-nav > ul > li.togglable-nav__item.jobseekers__item.jobseekers__item--sign-in > a')).click();
 });
@@ -127,12 +138,12 @@ When('I click on a sector', async () => {
 });
 
 Then('I should see jobs from that sector', async () => {
-  sector = await World.driver.findElement(By.id("browsing")).getText();
+  var sector = await World.driver.findElement(By.id("browsing")).getText();
   assert.equal(sector, "NGO jobs");
 });
 
 When('I click on a job', async () => {
-  World.driver.findElement(By.css("div.lister__footer.cf::after")).click();
+   await World.driver.findElement({xpath: "//*[@id='item-21459']/div[1]"}).click();
 });
 
 Then('I should see job details', async () => {
@@ -162,9 +173,13 @@ When('I click on the first search', async () => {
 });
 
 Then('Results will match search keyword', async () => {
-  result = World.driver.findElement(By.id("searching")).innerHTML;
-  console.log(result);
-  if (result.includes("Computing")) {
-    console.log("Success");
-  }
+
+var keyword = World.driver.findElement(By.id("searching")).getText();
+  keyword.then((text) => {
+    if (text.includes("Computing")) {
+        console.log("Success!");
+      } else {
+        console.log("Failed!!");
+      }
+    });
 });
