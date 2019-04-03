@@ -1,3 +1,5 @@
+
+@nav_links
 Feature: Test navigation links
 
 Scenario: Home link
