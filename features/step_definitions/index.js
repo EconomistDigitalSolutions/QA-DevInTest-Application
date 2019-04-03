@@ -3,9 +3,23 @@ const { By, until} = require("selenium-webdriver");
 const World = require("../support/world");
 const assert = require("assert");
 
+/*
+Pawan Kumar
+It was a fun task. I  definately had something to learn.
 
+To start off the task, I tried to understand the problem using pen and paper. I
+wrote down keywords and started breaking the problem down into smaller pieces. I
+started thinking about which test cases I can group together and started thinking
+about the git repo as well. I planned out all my branches and all the steps on paper
+and it helped me start off the solution to the problem.
 
+I came across a few problems during the task. getCurrentUrl() method was not working
+for me so I had to spent hours searching for a solution. And I came up with a solution
+after I kept at it and tried again. To overcome this problem, I had to understand how
+promises work.
+*/
 
+//Global variables for storing comparison links
 $HOME = "https://jobs.economist.com/";
 $FIND_JOB = "https://jobs.economist.com/jobs/";
 $JOB_ALERT = "https://jobs.economist.com/newalert/";
@@ -20,7 +34,7 @@ $FEATURED_JOBS = "featured-jobs__item";
 $FOOTER = "footer";
 
 
-//Page rendering
+//Page rendering: Checks significant components of the page have been rendered
 
 Given(/^I go to the jobs page$/, () => World.goToJobsPage());
 //if elements are found by selenium means they exist/rendered
@@ -48,13 +62,17 @@ Then('I should see the footer', async () => {
   return World.driver.findElement(By.css($FOOTER));
 });
 
-//Account links
+
+//Account links: Checks whether sign in and create an account links go to the right page.
+
 When('I click sign in', async () => {
   return World.driver.findElement(By.css('#secondary-nav > ul > li.togglable-nav__item.secondary-nav__item.secondary-nav--jobseekers.jobseekers.jobseekers-nav > ul > li.togglable-nav__item.jobseekers__item.jobseekers__item--sign-in > a')).click();
 });
 
 Then('I should see login page', async () => {
-  return World.driver.findElement(By.css('#main > div > div > div.grid-item.five-sixths.lap-one-whole.palm-one-whole > div > div:nth-child(1) > h1'));
+  await World.driver.getCurrentUrl().then(function(url){
+     assert.equal(url, "https://jobs.economist.com/logon/");
+  });
 });
 
 When('I click Create an Account', async () => {
@@ -62,7 +80,9 @@ When('I click Create an Account', async () => {
 });
 
 Then('I should see create account page', async () => {
-  return World.driver.findElement(By.id('create-account'));
+  await World.driver.getCurrentUrl().then(function(url){
+     assert.equal(url, "https://jobs.economist.com/register/");
+  });
 });
 
 When('I click home', async () => {
@@ -70,12 +90,9 @@ When('I click home', async () => {
 });
 
 Then('Redirects to home page', async () => {
-   // assert.equal(World.driver.getCurrentUrl(), $HOME);
-   // String CurrentUrl = World.driver.getCurrentUrl();
-   // World.driver.wait(1000*3);
    await World.driver.getCurrentUrl().then(function(url){
      assert.equal(url, $HOME);
-     });
+    });
 });
 
 When('I click Find a job', async () => {
@@ -118,7 +135,8 @@ Then('Redirects to Jobs blog', async () => {
   });
 });
 
-  //SEARCHING
+
+  //SEARCHING: Checks whether clicking a sector shows relevant results
 
 When('I click on a sector', async () => {
   return World.driver.findElement(By.linkText("NGO")).click();
@@ -161,7 +179,7 @@ When('I click on the first search', async () => {
 
 Then('Results will match search keyword', async () => {
 
-var keyword = World.driver.findElement(By.id("searching")).getText();
+  var keyword = World.driver.findElement(By.id("searching")).getText();
   keyword.then((text) => {
     if (text.includes("Computing")) {
         console.log("Success!");
@@ -172,63 +190,54 @@ var keyword = World.driver.findElement(By.id("searching")).getText();
 });
 
 
-//Footer links
+
+//Footer links: Checks if footer navigation links go to the right page. Social links not tested.
+
 When('I click on About us', async () => {
- // Write code here that turns the phrase above into concrete actions
  await World.driver.findElement({linkText: "About Us"}).click();
 });
 
 Then('Redirect to About us', async () => {
- // Write code here that turns the phrase above into concrete actions
  await World.driver.getCurrentUrl().then(function(url){
     assert.equal(url, "https://jobs.economist.com/about-us/");
  });
 });
 
 When('I click on Contact us', async () => {
- // Write code here that turns the phrase above into concrete actions
  return await World.driver.findElement({linkText: "Contact Us"}).click();
 });
 
 Then('Redirect to Contact us', async () => {
- // Write code here that turns the phrase above into concrete actions
  await World.driver.getCurrentUrl().then(function(url){
     assert.equal(url, "https://jobs.economist.com/contact-us/");
  });
 });
 
 When('I click on Terms and conditions', async () => {
- // Write code here that turns the phrase above into concrete actions
  return await World.driver.findElement({linkText: "Terms & Conditions"}).click();
 });
 
 Then('Redirect to Terms and conditions', async () => {
- // Write code here that turns the phrase above into concrete actions
  await World.driver.getCurrentUrl().then(function(url){
     assert.equal(url, "https://jobs.economist.com/terms-and-conditions/");
  });
 });
 
 When('I click on Privacy policy', async () => {
- // Write code here that turns the phrase above into concrete actions
  return await World.driver.findElement({linkText: "Privacy Policy"}).click();
-
 });
 
 Then('Redirect to Privacy policy', async () => {
- // Write code here that turns the phrase above into concrete actions
  await World.driver.getCurrentUrl().then(function(url){
     assert.equal(url, "https://jobs.economist.com/privacy-policy/");
  });
 });
 
 When('I click on Advertise with us', async () =>{
- // Write code here that turns the phrase above into concrete actions
  await World.driver.findElement({linkText: "Advertise with us"}).click();
 });
 
 Then('Redirect to Advertise with us', async () =>{
- // Write code here that turns the phrase above into concrete actions
  await World.driver.getCurrentUrl().then(function(url){
     assert.equal(url, "https://recruiters.jobs.economist.com/");
  });
