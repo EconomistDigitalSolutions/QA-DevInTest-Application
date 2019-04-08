@@ -59,3 +59,7 @@ Then(/^the Featured Jobs brick contains featured jobs$/, async () => {
   expect(jobs.length).to.be.gte(1, 'No featured jobs found');
 });
 
+Then(/^the footer is shown$/, async () => {
+  const isDisplayed = await World.jobsPage.footer.isDisplayed();
+  expect(isDisplayed).to.eql(true, 'Footer not displayed');
+});

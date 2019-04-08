@@ -30,4 +30,6 @@ Feature: Jobs page
     Then the Featured Jobs brick is shown
     And the Featured Jobs brick contains featured jobs
 
-    And it contains featured jobs
+  Scenario: Footer rendered
+    Given I go to the jobs page
+    Then the footer is shown
