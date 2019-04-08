@@ -8,25 +8,23 @@ Given(/^I go to the jobs page$/, () => World.goToJobsPage());
 Then(/^I should see the navigation bar$/,
   async () => World.driver.findElement(By.id('primary-nav')));
 
-const searchFields = {
-  keyword: 'field--keyword',
-  location: 'field--location',
-  distance: 'field--radial-select',
-};
-
 Then(/^I should see the search form$/, async () => {
-  const displayed = await World.driver
-    .findElement(By.className('search__form'))
-    .isDisplayed();
-
+  const displayed = await World.jobsPage.searchForm.isDisplayed();
   expect(displayed).to.eql(true, 'Search field not displayed');
 });
 
-Then(/^I should see the search field for "(.*)"$/, async (fieldName) => {
-  const fieldVisible = await World.driver
-    .findElement(By.className('search__form'))
-    .findElement(By.className(searchFields[fieldName]))
-    .isDisplayed();
+// These field steps should probably take a field name and dispatch dynamically
+Then(/^I should see the search field for keyword$/, async () => {
+  const fieldVisible = await World.jobsPage.keywordField.isDisplayed();
+  expect(fieldVisible).to.eql(true, 'Search field for keyword not displayed');
+});
 
-  expect(fieldVisible).to.eql(true, `Search field for ${fieldName} not displayed`);
+Then(/^I should see the search field for location$/, async () => {
+  const fieldVisible = await World.jobsPage.locationField.isDisplayed();
+  expect(fieldVisible).to.eql(true, 'Search field for locationkeyword not displayed');
+});
+
+Then(/^I should see the search field for distance$/, async () => {
+  const fieldVisible = await World.jobsPage.distanceField.isDisplayed();
+  expect(fieldVisible).to.eql(true, 'Search field for distance not displayed');
 });

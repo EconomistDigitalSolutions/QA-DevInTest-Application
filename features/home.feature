@@ -11,6 +11,6 @@ Feature: Jobs page
   Scenario: Search fields rendered
     Given I go to the jobs page
     Then I should see the search form
-    And I should see the search field for "keyword"
-    And I should see the search field for "location"
-    And I should see the search field for "distance"
+    And I should see the search field for keyword
+    And I should see the search field for location
+    And I should see the search field for distance
