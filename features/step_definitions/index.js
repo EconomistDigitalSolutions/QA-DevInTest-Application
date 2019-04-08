@@ -28,3 +28,13 @@ Then(/^I should see the search field for distance$/, async () => {
   const fieldVisible = await World.jobsPage.distanceField.isDisplayed();
   expect(fieldVisible).to.eql(true, 'Search field for distance not displayed');
 });
+
+Then(/^the Featured Jobs brick is shown$/, async () => {
+  const brickVisible = await World.jobsPage.featuredJobsBrick.isDisplayed();
+  expect(brickVisible).to.eql(true, 'Featured jobs brick not displayed');
+});
+
+Then(/^it contains featured jobs$/, async () => {
+  const jobs = await World.jobsPage.featuredJobs;
+  expect(jobs.length).to.be.gte(1, 'No featured jobs found');
+});

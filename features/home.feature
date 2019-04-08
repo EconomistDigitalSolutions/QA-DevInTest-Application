@@ -14,3 +14,8 @@ Feature: Jobs page
     And I should see the search field for keyword
     And I should see the search field for location
     And I should see the search field for distance
+
+  Scenario: Featured jobs rendered
+    Given I go to the jobs page
+    Then the Featured Jobs brick is shown
+    And it contains featured jobs

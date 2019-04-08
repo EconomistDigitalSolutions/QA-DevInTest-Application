@@ -5,7 +5,8 @@ class JobsPage {
     this.driver = driver;
   }
 
-  // This and similar methods should go into a base class
+  // This and similar methods to abstract the driver calls
+  // should go into a base class
   findByClassName(className) {
     return this.driver.findElement(By.className(className));
   }
@@ -17,6 +18,13 @@ class JobsPage {
   get locationField() { return this.findByClassName('field--location'); }
 
   get distanceField() { return this.findByClassName('field--radial-select'); }
+
+  get featuredJobsBrick() { return this.findByClassName('featured-jobs'); }
+
+  get featuredJobs() {
+    return this.featuredJobsBrick
+      .findElements(By.className('featured-jobs__item'));
+  }
 }
 
 module.exports = JobsPage;
