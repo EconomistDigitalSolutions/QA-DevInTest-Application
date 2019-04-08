@@ -10,7 +10,9 @@ class SectorJobsPage extends BasePage {
     return this.driver.findElements(By.className('lister__item'));
   }
 
-  get firstJobLink() { return this.findByClassName('lister__item'); }
+  get firstJobListing() { return this.findByClassName('lister__item'); }
+
+  get firstJobLink() { return this.findByClassName('button--lister-view-details'); }
 }
 
 module.exports = SectorJobsPage;

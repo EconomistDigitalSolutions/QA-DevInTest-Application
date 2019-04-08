@@ -13,9 +13,13 @@ class JobsPage extends BasePage {
   get sectorList() { return this.findByClassName('facet-links'); }
 
   // While featured jobs was scoped, it looks like scoping isn't
-  // required as the class names are using BEM.
+  // required as the class names are mostly using BEM.
   get sectorListItems() {
     return this.driver.findElements(By.className('facet-links__link'));
+  }
+
+  sectorNavItem(linkText) {
+    return this.sectorList.findElement(By.linkText(linkText));
   }
 
   get jobsBlog() { return this.findByClassName('articles'); }

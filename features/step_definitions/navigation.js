@@ -30,7 +30,6 @@ Then(/^jobs for sector "(.*)" are shown$/, async (sectorName) => {
 });
 
 When(/^I click on the the first job ad$/, async () => {
-  await World.driver.wait(until.elementIsVisible(World.sectorJobsPage.firstJobLink));
   await World.sectorJobsPage.firstJobLink.click();
 });
 
