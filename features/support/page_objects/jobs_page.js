@@ -1,16 +1,7 @@
 const { By } = require('selenium-webdriver');
+const BasePage = require('../page_objects/base_page');
 
-class JobsPage {
-  constructor(driver) {
-    this.driver = driver;
-  }
-
-  // This and similar methods to abstract the driver calls
-  // should go into a base class
-  findByClassName(className) {
-    return this.driver.findElement(By.className(className));
-  }
-
+class JobsPage extends BasePage {
   get searchForm() { return this.findByClassName('search__form'); }
 
   get keywordField() { return this.findByClassName('field--keyword'); }
