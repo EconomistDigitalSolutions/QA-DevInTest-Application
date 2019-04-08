@@ -15,6 +15,11 @@ Feature: Jobs page
     And I should see the search field for location
     And I should see the search field for distance
 
+  Scenario: Sector list rendered
+    Given I go to the jobs page
+    Then the sector list is shown
+    And it contains job sectors
+
   Scenario: Featured jobs rendered
     Given I go to the jobs page
     Then the Featured Jobs brick is shown
