@@ -33,3 +33,13 @@ Feature: Jobs page
   Scenario: Footer rendered
     Given I go to the jobs page
     Then the footer is shown
+
+  Scenario: Signin link goes to the correct page
+    Given I go to the jobs page
+    When I click on the sign in link
+    Then I am taken to the sign in page
+
+  Scenario: Create account link goes to the correct page
+    Given I go to the jobs page
+    When I click on the create account link
+    Then I am taken to the registration page

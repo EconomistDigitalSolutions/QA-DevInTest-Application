@@ -1,4 +1,4 @@
-const { Given, Then } = require('cucumber');
+const { Given, When, Then } = require('cucumber');
 const { By } = require('selenium-webdriver');
 const { expect } = require('chai');
 const World = require('../support/world');
@@ -62,4 +62,22 @@ Then(/^the Featured Jobs brick contains featured jobs$/, async () => {
 Then(/^the footer is shown$/, async () => {
   const isDisplayed = await World.jobsPage.footer.isDisplayed();
   expect(isDisplayed).to.eql(true, 'Footer not displayed');
+});
+
+When(/^I click on the sign in link$/, async () => {
+  await World.jobsPage.loginLink.click();
+});
+
+Then(/^I am taken to the sign in page$/, async () => {
+  const isDisplayed = await World.logonPage.loginForm.isDisplayed();
+  expect(isDisplayed).to.eql(true, 'Login form not displayed');
+});
+
+When(/^I click on the create account link$/, async () => {
+  await World.jobsPage.signupLink.click();
+});
+
+Then(/^I am taken to the registration page$/, async () => {
+  const isDisplayed = await World.logonPage.signupForm.isDisplayed();
+  expect(isDisplayed).to.eql(true, 'Signup form not displayed');
 });
