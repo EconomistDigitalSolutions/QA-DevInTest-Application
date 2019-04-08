@@ -27,6 +27,14 @@ class BasePage {
   get signupLink() {
     return this.findByClassName('jobseekers__item--create-account');
   }
+
+  get topLevelNav() {
+    return this.findById('primary-nav');
+  }
+
+  topLevelNavItem(linkText) {
+    return this.topLevelNav.findElement(By.linkText(linkText));
+  }
 }
 
 module.exports = BasePage;
