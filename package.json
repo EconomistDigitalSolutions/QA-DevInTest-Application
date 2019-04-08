@@ -16,6 +16,7 @@
   },
   "scripts": {
     "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast",
+    "test:wip": "node node_modules/cucumber/bin/cucumber-js --fail-fast --tags @wip",
     "lint": "npx eslint features/**/*.js"
   },
   "repository": {
