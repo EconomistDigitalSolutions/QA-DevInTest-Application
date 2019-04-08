@@ -34,9 +34,19 @@ Then(/^the sector list is shown$/, async () => {
   expect(isDisplayed).to.eql(true, 'Sector list not displayed');
 });
 
-Then(/^it contains job sectors$/, async () => {
+Then(/^the sector list contains job sectors$/, async () => {
   const sectors = await World.jobsPage.sectorListItems;
   expect(sectors.length).to.be.gte(1, 'No job sectors found');
+});
+
+Then(/^the jobs blog is shown$/, async () => {
+  const isDisplayed = await World.jobsPage.jobsBlog.isDisplayed();
+  expect(isDisplayed).to.eql(true, 'Jobs blog not displayed');
+});
+
+Then(/^the jobs blog contains articles$/, async () => {
+  const articles = await World.jobsPage.jobsBlogArticles;
+  expect(articles.length).to.be.gte(1, 'No articles found');
 });
 
 Then(/^the Featured Jobs brick is shown$/, async () => {
@@ -44,7 +54,8 @@ Then(/^the Featured Jobs brick is shown$/, async () => {
   expect(isDisplayed).to.eql(true, 'Featured jobs brick not displayed');
 });
 
-Then(/^it contains featured jobs$/, async () => {
+Then(/^the Featured Jobs brick contains featured jobs$/, async () => {
   const jobs = await World.jobsPage.featuredJobs;
   expect(jobs.length).to.be.gte(1, 'No featured jobs found');
 });
+

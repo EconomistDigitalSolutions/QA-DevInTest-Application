@@ -18,9 +18,16 @@ Feature: Jobs page
   Scenario: Sector list rendered
     Given I go to the jobs page
     Then the sector list is shown
-    And it contains job sectors
+    And the sector list contains job sectors
+
+  Scenario: Jobs Blog rendered
+    Given I go to the jobs page
+    Then the jobs blog is shown
+    And the jobs blog contains articles
 
   Scenario: Featured jobs rendered
     Given I go to the jobs page
     Then the Featured Jobs brick is shown
+    And the Featured Jobs brick contains featured jobs
+
     And it contains featured jobs

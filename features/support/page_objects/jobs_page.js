@@ -18,6 +18,12 @@ class JobsPage extends BasePage {
     return this.driver.findElements(By.className('facet-links__link'));
   }
 
+  get jobsBlog() { return this.findByClassName('articles'); }
+
+  get jobsBlogArticles() {
+    return this.driver.findElements(By.className('articles__item'));
+  }
+
   get featuredJobsBrick() { return this.findByClassName('featured-jobs'); }
 
   // As commented above, scoping doesn't seem to be necessary but leaving
