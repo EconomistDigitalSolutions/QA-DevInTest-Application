@@ -2,6 +2,7 @@ const { setWorldConstructor, setDefaultTimeout } = require('cucumber');
 const { Builder, Capabilities } = require('selenium-webdriver');
 require('chromedriver');
 const JobsPage = require('../page_objects/jobs_page');
+const LogonPage = require('../page_objects/logon_page');
 
 const DEFAULT_TIMEOUT = 60000;
 const BASE_URL = 'https://jobs.economist.com';
@@ -28,6 +29,7 @@ class CustomWorld {
   start() {
     this.driver = buildDriver();
     this.jobsPage = new JobsPage(this.driver);
+    this.logonPage = new LogonPage(this.driver);
   }
 
   async end() {

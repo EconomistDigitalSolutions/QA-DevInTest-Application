@@ -8,12 +8,24 @@ class BasePage {
     this.driver = driver;
   }
 
-  get footer() {
-    return this.driver.findElement(By.tagName('footer'));
+  findById(id) {
+    return this.driver.findElement(By.id(id));
   }
 
   findByClassName(className) {
     return this.driver.findElement(By.className(className));
+  }
+
+  get footer() {
+    return this.driver.findElement(By.tagName('footer'));
+  }
+
+  get loginLink() {
+    return this.findByClassName('jobseekers__item--sign-in');
+  }
+
+  get signupLink() {
+    return this.findByClassName('jobseekers__item--create-account');
   }
 }
 
