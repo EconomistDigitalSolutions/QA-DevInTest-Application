@@ -24,6 +24,26 @@ class CustomWorld {
     return this.driver.get(BASE_URL);
   }
 
+  verifyPageTitle(pageTitle) {
+    return this.driver.wait(until.titleIs(pageTitle), 3000, 'Could not find correct page title');
+  }
+
+  verifySectionTitle(sectionTitle) {
+    return this.driver.wait(until.titleIs(sectionTitle), 3000, 'Could not find correct section page title');
+  }
+
+  verifySectorTitle(sectorTitle) {
+    return this.driver.wait(until.titleIs(sectorTitle), 3000, 'Could not find correct sector page title');
+  }
+
+  clickTextLink(text) {
+    return this.driver.wait(until.elementLocated(By.partialLinkText(text)), 3000, 'Could not locate').click();
+  }
+
+  verifyElementExists(elementName) {
+    return this.driver.wait(until.elementLocated(By.partialLinkText(elementName)), 3000, 'Could not locate').click();
+  }
+
   start() {
     this.driver = buildDriver();
   }
