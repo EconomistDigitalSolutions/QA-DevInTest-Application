@@ -76,6 +76,15 @@ class CustomWorld {
     return this.driver.wait(until.elementLocated(By.partialLinkText(captialize)), 3000, 'Could not locate search results');
   }
 
+   // Could be nicer
+   loginInvalid() {
+    this.driver.wait(until.elementLocated(By.id('signinemail')), 3000, 'Could not locate keyword').sendKeys('garbageemail@garbage.mail');
+    this.driver.wait(until.elementLocated(By.id('signinemail')), 3000, 'Could not locate location').sendKeys('password');
+    this.driver.wait(until.elementLocated(By.className('width-full')), 3000, 'Could not locate button').click();
+    
+    // Checking for the error message area being visible, rather than the text
+    return this.driver.wait(until.elementLocated(By.id('message')), 3000, 'Could not locate search results');
+  }
   start() {
     this.driver = buildDriver();
   }

@@ -18,6 +18,7 @@ Feature: Jobs Homepage
   Scenario: Login form
     Given I click the link text "Sign in"
     Then the sign in form displayed
+    And I try to log in with invalid credentials
 
   Scenario: Create account form
     Given I click the link text "Create account"

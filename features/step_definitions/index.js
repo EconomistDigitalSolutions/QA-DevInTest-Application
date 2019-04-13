@@ -18,3 +18,5 @@ When('I submit valid search with {string} and get relevant results', async (stri
 Then('the sign in form displayed', async () => World.verifySignInForm())
 
 Then('the create account form displayed', async () => World.verifyCreateAccountForm())
+
+Then('I try to log in with invalid credentials', async () => World.loginInvalid())
