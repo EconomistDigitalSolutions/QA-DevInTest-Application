@@ -11,7 +11,7 @@ Then('I should see the sector {string}', async (string) => World.verifySectorTit
 
 When('I click the link text {string}', async (string) => World.clickTextLink(string))
 
-When('the {string} is visible', async () => World.verifyElementExists(string))
+When('the {string} is visible', async (string) => World.verifyElementExists(string))
 
 When('I submit valid search with {string} and get relevant results', async (string) => World.submitValidSearch(string))
 
