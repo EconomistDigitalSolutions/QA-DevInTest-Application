@@ -1,4 +1,4 @@
-const { After, Before } = require('cucumber');
+const { After, Before, Status } = require('cucumber');
 const World = require('../support/world');
 
 function testCaseHook(finished, testCase, callback) {
@@ -17,4 +17,5 @@ const before = testCaseHook.bind(this, false);
 
 Before(before);
 After(after);
+
 After(() => World.end());

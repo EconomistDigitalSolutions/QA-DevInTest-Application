@@ -9,10 +9,16 @@
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "assert": "^1.4.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^5.16.0",
+    "multiple-cucumber-html-reporter": "^1.11.6"
   },
   "scripts": {
-    "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast"
+    "test": "./node_modules/cucumber/bin/cucumber-js --format json:reports/report.json",
+    "report": "node reporter.js",
+    "lint": "./node_modules/.bin/eslint ./**/*.js"
   },
   "repository": {
     "type": "git",
