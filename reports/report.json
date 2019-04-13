@@ -1,0 +1,1970 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Jobs Homepage",
+    "line": 1,
+    "id": "jobs-homepage",
+    "tags": [],
+    "uri": "features/home.feature",
+    "elements": [
+      {
+        "id": "jobs-homepage;jobs-search",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Jobs Search",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2582000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I should see the section \"Jobs blog\"",
+            "match": {
+              "location": "features/step_definitions/index.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I should see the section \"Featured jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I submit valid search with \"Vice President\" and get relevant results",
+            "match": {
+              "location": "features/step_definitions/index.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1161000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-search-edge-cases",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Jobs Search Edge Cases",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1853000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I submit valid search with \"vice president\" and get relevant results",
+            "match": {
+              "location": "features/step_definitions/index.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1208000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-search-edge-cases",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Jobs Search Edge Cases",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2077000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I submit valid search with \"VICE PRESIDENT\" and get relevant results",
+            "match": {
+              "location": "features/step_definitions/index.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1178000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;login-form",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Login form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1723000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I click the link text \"Sign in\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 897000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "the sign in form displayed",
+            "match": {
+              "location": "features/step_definitions/index.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I try to log in with invalid credentials",
+            "match": {
+              "location": "features/step_definitions/index.js:22"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5006000000,
+              "error_message": "TimeoutError: Could not locate error message\nWait timed out after 5003ms\n    at /home/pablo/github/QA-DevInTest-Application/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;create-account-form",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Create account form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1761000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I click the link text \"Create account\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 906000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "the create account form displayed",
+            "match": {
+              "location": "features/step_definitions/index.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-navigation-bar-links",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Jobs Page Navigation Bar Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1687000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I click the link text \"Find a job\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1162000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I expect to see page title \"Browse jobs | Jobs.Economist.com\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-navigation-bar-links",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Jobs Page Navigation Bar Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1747000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I click the link text \"Job alerts\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 958000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I expect to see page title \"New Job By Email | Jobs.Economist.com\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-navigation-bar-links",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Jobs Page Navigation Bar Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1852000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I click the link text \"Search recruiters\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 973000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I expect to see page title \"Recruiters on Jobs.Economist.com\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-navigation-bar-links",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Jobs Page Navigation Bar Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1773000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I click the link text \"Jobs blog\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1107000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I expect to see page title \"Articles and careers information on Jobs.Economist.com\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-footer-links",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Jobs Page Footer Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1763000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "I click the link text \"About Us\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 954000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I expect to see page title \"The Economist jobs board | About Us\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-footer-links",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "Jobs Page Footer Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1801000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "I click the link text \"Contact Us\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1027000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I expect to see page title \"Jobs.Economist.com | Contact Us\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-footer-links",
+        "keyword": "Scenario",
+        "line": 46,
+        "name": "Jobs Page Footer Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1844000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "I click the link text \"Terms & Conditions\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 916000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I expect to see page title \"Jobs.Economist.com | Terms & Conditions\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-footer-links",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "Jobs Page Footer Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1729000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "I click the link text \"Privacy Policy\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 897000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I expect to see page title \"Jobs.Economist.com | Privacy Policy\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;jobs-page-footer-links",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Jobs Page Footer Links",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1789000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "I click the link text \"Advertise with us\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 471000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I expect to see page title \"Jobs.Economist.com | Recruiter Services\"",
+            "match": {
+              "location": "features/step_definitions/index.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 55,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1740000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"Banking and finance\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1334000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"Banking and finance jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 56,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1863000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"Business services\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 950000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"Business services jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 57,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1713000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"Government\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1153000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"Government jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 58,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1939000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"Academia\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1224000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"Academia jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 59,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1780000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"Primary and utility\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 917000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"Primary and utility jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 60,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2123000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"Charity\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 954000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"Charity jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 61,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1680000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"International public sector\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1086000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"International public sector jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 62,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1854000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"NGO\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1042000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"NGO jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 63,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1706000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"Consultancy\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1043000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"Consultancy jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "jobs-homepage;job-sectors",
+        "keyword": "Scenario",
+        "line": 64,
+        "name": "Job sectors",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "features/step_definitions/index.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1800000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I click the link text \"Development\"",
+            "match": {
+              "location": "features/step_definitions/index.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1056000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see the sector \"Development jobs\"",
+            "match": {
+              "location": "features/step_definitions/index.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/setup.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -78,12 +78,12 @@ class CustomWorld {
 
    // Could be nicer
    loginInvalid() {
-    this.driver.wait(until.elementLocated(By.id('signinemail')), 3000, 'Could not locate keyword').sendKeys('garbageemail@garbage.mail');
-    this.driver.wait(until.elementLocated(By.id('signinemail')), 3000, 'Could not locate location').sendKeys('password');
-    this.driver.wait(until.elementLocated(By.className('width-full')), 3000, 'Could not locate button').click();
-    
+    this.driver.wait(until.elementLocated(By.id('signinemail')), 3000, 'Could not locate username field').sendKeys('garbageemail@garbage.com');
+    this.driver.wait(until.elementLocated(By.id('signinpassword')), 3000, 'Could not locate password field').sendKeys('password');
+    this.driver.wait(until.elementLocated(By.className('button--brand')), 3000, 'Could not locate button').click();
+
     // Checking for the error message area being visible, rather than the text
-    return this.driver.wait(until.elementLocated(By.id('message')), 3000, 'Could not locate search results');
+    return this.driver.wait(until.elementLocated(By.id('message')), 5000, 'Could not locate error message');
   }
   start() {
     this.driver = buildDriver();
