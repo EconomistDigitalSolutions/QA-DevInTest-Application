@@ -2,6 +2,7 @@ const { Given, When, Then } = require('cucumber');
 const { By } = require('selenium-webdriver');
 const assert = require('assert');
 const World = require('../support/world');
+const driver = World.driver;
 
 Given(/^I go to the jobs page$/, () => World.goToJobsPage());
 

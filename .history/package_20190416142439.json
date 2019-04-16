@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node node_modules/cucumber/bin/cucumber-js"
+    "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast"
   },
   "repository": {
     "type": "git",
