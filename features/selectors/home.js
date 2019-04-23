@@ -1,8 +1,11 @@
-const templates = require('./templates');
+const { navigationLinkLocatorTemplate } = require('./templates');
 
 module.exports = {
   'Navigation Bar': {
     id: 'primary-nav',
+  },
+  'Home Header': {
+    className: 'home-header',
   },
   'Search Keywords Textbox': {
     id: 'keywords',
@@ -40,10 +43,19 @@ module.exports = {
   'Create Account Link': {
     linkText: 'Create account',
   },
-  'Sign In Form': {
-    xpath: templates.blockLocatorTemplate('Sign in'),
+  'Home Link': {
+    xpath: navigationLinkLocatorTemplate('Home'),
   },
-  'Create Account Form': {
-    xpath: templates.blockLocatorTemplate('Create an accounxt'),
+  'Find A Job Link': {
+    xpath: navigationLinkLocatorTemplate('Find a job'),
+  },
+  'Job Alerts Link': {
+    xpath: navigationLinkLocatorTemplate('Job alerts'),
+  },
+  'Search Recruiters Link': {
+    xpath: navigationLinkLocatorTemplate('Search recruiters'),
+  },
+  'Jobs Blog Link': {
+    xpath: navigationLinkLocatorTemplate('Jobs blog'),
   },
 };
