@@ -1,3 +1,5 @@
+const templates = require('./templates');
+
 module.exports = {
   'Navigation Bar': {
     id: 'primary-nav',
@@ -31,5 +33,17 @@ module.exports = {
   },
   Footer: {
     tagName: 'footer',
+  },
+  'Sign In Link': {
+    linkText: 'Sign in',
+  },
+  'Create Account Link': {
+    linkText: 'Create account',
+  },
+  'Sign In Form': {
+    xpath: templates.blockLocatorTemplate('Sign in'),
+  },
+  'Create Account Form': {
+    xpath: templates.blockLocatorTemplate('Create an accounxt'),
   },
 };
