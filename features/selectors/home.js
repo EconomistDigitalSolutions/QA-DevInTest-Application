@@ -1,6 +1,6 @@
 module.exports = {
   'Navigation Bar': {
-      id: 'primary-nav',
+    id: 'primary-nav',
   },
   'Search Keywords Textbox': {
     id: 'keywords',
@@ -29,7 +29,7 @@ module.exports = {
   'Featured Jobs Link': {
     className: 'featured-jobs__item',
   },
-  'Footer': {
+  Footer: {
     tagName: 'footer',
   },
 };
