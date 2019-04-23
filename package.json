@@ -6,10 +6,14 @@
   "dependencies": {
     "chromedriver": "^2.45.0",
     "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^5.0.0",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {},
   "scripts": {
+    "test:pre": "if not exist \"results\", mkdir \"results\"",
+    "test:post": "node reporter.js",
+    "test:all": "npm run test:pre && npm run test -- -f \"json:./results/report.cucumber\" && npm run test:post",
     "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast"
   },
   "repository": {
