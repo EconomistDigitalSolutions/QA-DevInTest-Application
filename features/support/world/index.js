@@ -20,6 +20,10 @@ function buildDriver() {
 }
 
 class CustomWorld {
+  get baseUrl() {
+    return BASE_URL;
+  }
+
   goToJobsPage() {
     return this.driver.get(BASE_URL);
   }
