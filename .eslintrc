@@ -1,0 +1,17 @@
+{   
+    "rules": {
+        "quotes": ["error", "single"],
+        "new-cap": ["error", { "capIsNew": false }],
+        "prefer-destructuring": ["error", {"object": false}],
+        "no-undef": "off"
+    },
+    "env": {
+        "browser": false,
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    }
+}
