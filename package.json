@@ -4,11 +4,12 @@
   "description": "Application for accessing DevInTest candidates",
   "main": "index.js",
   "dependencies": {
+    "assert": "^1.4.1",
     "chromedriver": "^2.45.0",
     "cucumber": "^5.1.0",
+    "eslint": "^5.16.0",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast"
   },
