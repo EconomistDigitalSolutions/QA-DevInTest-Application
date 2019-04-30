@@ -1,10 +1,10 @@
-const { blockLocatorTemplate } = require('./templates');
+const { signInCreateAccountFormTemplate } = require('./templates');
 
 module.exports = {
   'Sign In Form': {
-    xpath: blockLocatorTemplate('Sign in'),
+    xpath: signInCreateAccountFormTemplate('Sign in'),
   },
   'Create Account Form': {
-    xpath: blockLocatorTemplate('Create an account'),
+    xpath: signInCreateAccountFormTemplate('Create an account'),
   },
 };

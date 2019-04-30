@@ -18,7 +18,7 @@
   Examples:
   | Link                   | Element                  |
   | Home Link              | Home Header              |
-  | Find A Job Link        | Find Job Header          |
+  | Find A Job Link        | Jobs Header          |
   | Job Alerts Link        | Job Alerts Header        |
   | Search Recruiters Link | Search Recruiters Header |
   | Jobs Blog Link         | Jobs Blog Header         |

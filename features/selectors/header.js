@@ -1,4 +1,4 @@
-const { navigationLinkLocatorTemplate } = require('./templates');
+const { navigationLinkTemplate } = require('./templates');
 
 module.exports = {
   'Sign In Link': {
@@ -11,18 +11,18 @@ module.exports = {
     id: 'primary-nav',
   },
   'Home Link': {
-    xpath: navigationLinkLocatorTemplate('Home'),
+    xpath: navigationLinkTemplate('Home'),
   },
   'Find A Job Link': {
-    xpath: navigationLinkLocatorTemplate('Find a job'),
+    xpath: navigationLinkTemplate('Find a job'),
   },
   'Job Alerts Link': {
-    xpath: navigationLinkLocatorTemplate('Job alerts'),
+    xpath: navigationLinkTemplate('Job alerts'),
   },
   'Search Recruiters Link': {
-    xpath: navigationLinkLocatorTemplate('Search recruiters'),
+    xpath: navigationLinkTemplate('Search recruiters'),
   },
   'Jobs Blog Link': {
-    xpath: navigationLinkLocatorTemplate('Jobs blog'),
+    xpath: navigationLinkTemplate('Jobs blog'),
   },
 };
