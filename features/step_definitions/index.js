@@ -1,6 +1,6 @@
 const { Given, Then } = require('cucumber');
 const World = require('../support/world');
-const selectors = require('../selectors/home');
+const selectors = require('../selectors');
 
 Given(/^I go to the jobs page$/, () => World.goToJobsPage());
 

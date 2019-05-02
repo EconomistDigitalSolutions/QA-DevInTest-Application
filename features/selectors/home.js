@@ -1,7 +1,4 @@
 module.exports = {
-  'Navigation bar': {
-    id: 'primary-nav',
-  },
   'Job title': {
     id: 'keywords',
   },
@@ -15,13 +12,13 @@ module.exports = {
     css: 'input[type="submit"]',
   },
   'Jobs by Sector': {
-    xpath: '//*[@class="browse brick"]',
+    className: 'browse brick',
   },
   'Jobs blog': {
-    xpath: '//*[@class="articles brick"]',
+    className: 'articles brick',
   },
   'Featured jobs': {
-    xpath: '//*[@class="featured-jobs brick"]',
+    className: 'featured-jobs brick',
   },
   Footer: {
     xpath: '//footer',
