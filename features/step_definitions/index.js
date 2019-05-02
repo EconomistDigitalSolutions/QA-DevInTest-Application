@@ -1,9 +1,7 @@
 const { Given, Then } = require('cucumber');
-const { By } = require('selenium-webdriver');
 const World = require('../support/world');
+const selectors = require('../selectors/home');
 
 Given(/^I go to the jobs page$/, () => World.goToJobsPage());
 
-Then(/^I should see the navigation bar$/, async () => {
-  return World.driver.findElement(By.id('primary-nav'));
-})
+Then(/^I should see the '(.*)'\s?(?:block|searchbox|dropdown|button)?$/, async element => World.driver.findElement(selectors[element]));
