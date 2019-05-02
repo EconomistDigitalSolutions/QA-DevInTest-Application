@@ -4,13 +4,26 @@
   "description": "Application for accessing DevInTest candidates",
   "main": "index.js",
   "dependencies": {
-    "chromedriver": "^2.45.0",
+    "chai": "^4.2.0",
+    "chromedriver": "^2.46.0",
     "cucumber": "^5.1.0",
-    "selenium-webdriver": "^4.0.0-alpha.1"
+    "cucumber-html-reporter": "^5.0.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "webdriver-manager": "^12.1.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  },
   "scripts": {
-    "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast"
+    "lint": "eslint .",
+    "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast",
+    "test:all": "node node_modules/cucumber/bin/cucumber-js -f json:report.json && npm run posttest",
+    "posttest": "node reporter.js"
   },
   "repository": {
     "type": "git",
