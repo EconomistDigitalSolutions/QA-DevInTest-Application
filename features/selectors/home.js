@@ -1,3 +1,5 @@
+const { button } = require('../selectors/templates');
+
 module.exports = {
   'Job title': {
     id: 'keywords',
@@ -9,7 +11,7 @@ module.exports = {
     id: 'RadialLocation',
   },
   Search: {
-    css: 'input[type="submit"]',
+    css: button('Search'),
   },
   'Jobs by Sector': {
     className: 'browse brick',

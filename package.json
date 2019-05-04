@@ -21,6 +21,7 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "cucumber": "node node_modules/cucumber/bin/cucumber-js --require features/step_definitions",
     "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast",
     "test:all": "node node_modules/cucumber/bin/cucumber-js -f json:report.json && npm run posttest",
     "posttest": "node reporter.js"

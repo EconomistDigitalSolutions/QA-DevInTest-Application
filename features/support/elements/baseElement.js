@@ -10,7 +10,7 @@ const timeout = 10000;
  * @returns {string} locator info
  */
 function getElementInfo(selector) {
-  return `Locator with type ${Object.keys(selector)} is ${Object.values(selector)}`;
+  return `Locator with type '${Object.keys(selector)}' and path '${Object.values(selector)}'`;
 }
 
 /**

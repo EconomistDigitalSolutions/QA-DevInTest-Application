@@ -1,7 +1,11 @@
-const home = require('./home');
+const createAccount = require('./createAccount');
 const header = require('./header');
+const home = require('./home');
+const signIn = require('./signIn');
 
 module.exports = {
-  ...home,
+  ...createAccount,
   ...header,
+  ...home,
+  ...signIn,
 };

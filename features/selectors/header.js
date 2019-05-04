@@ -1,32 +1,29 @@
-/**
- * @param {string} item name of the related item
- * @return {string} locator
- * */
-const navigationBarLink = item => `//*[@class='primary-nav__link' and text()='${item}']`;
-
 module.exports = {
   'Navigation bar': {
     id: 'primary-nav',
   },
-  'Sign in': {
+  'Sign in link': {
     linkText: 'Sign in',
   },
-  'Create account': {
+  'Create account link': {
     linkText: 'Create account',
   },
   Home: {
-    xpath: navigationBarLink('Home'),
+    linkText: 'Home',
   },
   'Find a job': {
-    xpath: navigationBarLink('Find a job'),
+    linkText: 'Find a job',
   },
   'Job alerts': {
-    xpath: navigationBarLink('Job alerts'),
+    linkText: 'Job alerts',
   },
   'Search recruiters': {
-    xpath: navigationBarLink('Search recruiters'),
+    linkText: 'Search recruiters',
   },
   'Jobs blog': {
-    xpath: navigationBarLink('Jobs blog'),
+    linkText: 'Jobs blog',
+  },
+  'The Economist logo': {
+    xpath: '//div[@class="primary-logo"]//img',
   },
 };
