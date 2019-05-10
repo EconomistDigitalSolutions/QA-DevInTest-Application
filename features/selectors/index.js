@@ -7,6 +7,7 @@ const findJob = require('./findJob');
 const jobAlerts = require('./jobAlerts');
 const searchRecruiters = require('./searchRecruiters');
 const jobsBlog = require('./jobsBlog');
+const jobDetails = require('./jobDetails');
 
 module.exports = {
   ...paginator,
@@ -18,4 +19,5 @@ module.exports = {
   ...jobAlerts,
   ...searchRecruiters,
   ...jobsBlog,
+  ...jobDetails,
 };

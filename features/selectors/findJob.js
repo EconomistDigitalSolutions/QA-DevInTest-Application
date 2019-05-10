@@ -1,4 +1,4 @@
-const { headerTitle, browseFilter } = require('./templates');
+const { headerTitle, browseFilter, classContains } = require('./templates');
 
 const sector = 'Sector';
 
@@ -7,7 +7,7 @@ module.exports = {
     xpath: '//h1[contains(text(),"Found")]',
   },
   'Jobs list': {
-    xpath: '//*[contains(@class,"lister__item")]',
+    xpath: classContains('lister__item'),
   },
   'Jobs list header': {
     xpath: '//*[contains(@class, "lister__header")]//a',

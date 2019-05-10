@@ -35,6 +35,13 @@ const formBlock = item => `//form[//legend[text()='${item}']]`;
  * */
 const browseFilter = (sector, item) => `//div[h4[text()='${sector}']]//em[@class="filter__parent-term" and text()='${item}']`;
 
+/**
+ * @param {string} sector name of the related sector
+ * @param {string} item name of the related item
+ * @return {string} locator
+ * */
+const classContains = item => `//*[contains(@class,'${item}')]`;
+
 module.exports = {
   button,
   logInForm,
@@ -42,4 +49,5 @@ module.exports = {
   headerTitle,
   formBlock,
   browseFilter,
+  classContains,
 };
