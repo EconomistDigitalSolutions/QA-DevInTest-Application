@@ -8,8 +8,6 @@ const BASE_URL = 'https://jobs.economist.com';
 
 /**
  * Creation instance of browser
- * @param {string} hub selenium server url
- * @param {string} browser browser name
  */
 function buildDriver() {
   const chromeCapabilities = Capabilities.chrome();

@@ -15,6 +15,18 @@ module.exports = {
   Browse: {
     id: 'browse',
   },
+  'Search block': {
+    id: 'search',
+  },
+  'Keywords Search': {
+    id: 'keyword',
+  },
+  'Location Search': {
+    id: 'location',
+  },
+  'Radial Location Search': {
+    xpath: '//select[@id=\'RadialLocation\']',
+  },
   'Banking and finance jobs': {
     xpath: headerTitle('Banking and finance jobs'),
   },

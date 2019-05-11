@@ -35,7 +35,45 @@ async function click(selector) {
   await element.click();
 }
 
+/**
+ * Set text into textbox
+ * @param {Object} selector element selector
+ * @param {string} text text to setting
+ * @returns {Promise<void>} result of setting
+ */
+async function setText(selector, text) {
+  log(`Setting '${text}' text into '${Object.keys(selector)}'`);
+  const element = await findElement(selector);
+  await element.clear();
+  await element.sendKeys(text);
+}
+
+/**
+ * Get attribute of element
+ * @param {Object} selector element selector
+ * @param {Object} attribute of element
+ * @returns {*|!Promise<string>|string} attribute value
+ */
+async function getAttribute(selector, attribute) {
+  log(`Getting '${attribute}' attribite of '${Object.values(selector)}'`);
+  return findElement(selector).getAttribute(attribute);
+}
+
+/**
+ * Get text of element
+ * @param {Object} selector element selector
+ * @param {Object} state of element
+ * @returns {*|!Promise<string>|string} element text
+ */
+async function getText(selector) {
+  log(`Getting text from '${Object.values(selector)}'`);
+  return findElement(selector).getText();
+}
+
 module.exports = {
   findElement,
   click,
+  setText,
+  getAttribute,
+  getText,
 };

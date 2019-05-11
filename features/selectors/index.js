@@ -8,6 +8,7 @@ const jobAlerts = require('./jobAlerts');
 const searchRecruiters = require('./searchRecruiters');
 const jobsBlog = require('./jobsBlog');
 const jobDetails = require('./jobDetails');
+const footer = require('./footer');
 
 module.exports = {
   ...paginator,
@@ -20,4 +21,5 @@ module.exports = {
   ...searchRecruiters,
   ...jobsBlog,
   ...jobDetails,
+  ...footer,
 };

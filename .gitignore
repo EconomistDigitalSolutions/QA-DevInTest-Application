@@ -61,3 +61,6 @@ typings/
 .next
 
 \.vscode/launch\.json
+
+\report
+\report.json
