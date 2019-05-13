@@ -16,7 +16,7 @@ Feature: Jobs page renders correctly
     Then I should see the 'Jobs by Sector' block
 
   Scenario: Jobs blog
-    Then I should see the 'Jobs blog' block
+    Then I should see the 'Jobs blog section' block
 
   Scenario: Featured jobs
     Then I should see the 'Featured jobs' block

@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "chai": "^4.2.0",
-    "chromedriver": "^2.46.0",
+    "chromedriver": "^74.0.0",
     "cucumber": "^5.1.0",
     "cucumber-html-reporter": "^5.0.0",
     "selenium-webdriver": "^4.0.0-alpha.1",
@@ -17,13 +17,12 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.13.0"
   },
   "scripts": {
     "lint": "eslint .",
-    "cucumber": "node node_modules/cucumber/bin/cucumber-js --require features/step_definitions",
-    "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast",
-    "test:all": "node node_modules/cucumber/bin/cucumber-js -f json:report.json && npm run posttest",
+    "test": "node node_modules/cucumber/bin/cucumber-js -f json:report.json",
+    "test:all": "node node_modules/cucumber/bin/cucumber-js -f json:report.json",
     "posttest": "node reporter.js"
   },
   "repository": {
@@ -33,7 +32,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EconomistDigitalSolutions/QA-DevInTest-Application/issues"
+    "url": "https://github.com/EconomistDigitalSolutions/QA-DevInTest-Application/report"
   },
   "homepage": "https://github.com/EconomistDigitalSolutions/QA-DevInTest-Application#readme"
 }

@@ -5,7 +5,7 @@ Feature: Ensuring all the links in the footer are functional
     Then I should see the 'Footer' block
       And I should see the '<link>'
     When I click the '<link>'
-    Then the '<link>' link should go to the '<page>'
+    Then the '<link>' link should lead to the '<page>'
   
   Examples:
   | link                            | page                                                             |
@@ -16,5 +16,5 @@ Feature: Ensuring all the links in the footer are functional
   | Advertise with us link          | https://recruiters.jobs.economist.com/                           |
   | Facebook link                   | https://www.facebook.com/economistcareersnetwork                 |
   | Twitter link                    | https://twitter.com/careersnetwork                               |
-  | Linkedin link                   | https://www.linkedin.com/showcase/the-economist-careers-network/ |
+  | Linkedin link                   | https://www.linkedin.com/company/the-economist-careers-network   |
   | Madgex Job Board Solutions link | https://www.madgex.com/                                          |

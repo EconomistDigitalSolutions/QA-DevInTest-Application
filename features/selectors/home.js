@@ -13,7 +13,7 @@ module.exports = {
   Search: {
     css: button('Search'),
   },
-  'Jobs blog': {
+  'Jobs blog section': {
     className: 'articles brick',
   },
   'Featured jobs': {

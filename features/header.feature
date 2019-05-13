@@ -54,3 +54,8 @@ Feature: Each of the links in the navigation bar is functional and goes to the c
       And I should see the 'Articles list' block
       And I should see the 'Paginator' block
       And I should see the 'Footer' block
+
+  Scenario: Clicking on logo leads to the respective page
+    Then I should see the 'The Economist logo' link
+    When I click the 'The Economist logo' link
+    Then the 'The Economist logo' link should lead to the 'https://jobs.economist.com/'

@@ -38,7 +38,7 @@ Feature: Searching for a job correctly displays relevant search results
     When I select value '<radial location>' in the 'Radial Location' dropdown
       And I click the 'Search' button
     Then I should see the 'Search block'
-      And distance '<distance>' in the 'Radial Location Search' dropdown should be 'selected'
+      And value '<distance>' in the 'Radial Location Search' dropdown should be 'selected'
 
   Examples:
   | radial location | distance |
