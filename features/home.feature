@@ -23,4 +23,3 @@ Feature: Jobs page renders correctly
 
   Scenario: Footer
     Then I should see the 'Footer' block
-    

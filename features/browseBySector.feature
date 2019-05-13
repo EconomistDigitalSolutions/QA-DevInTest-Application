@@ -14,15 +14,15 @@ Feature: Clicking on a sector shows a list of jobs from only that sector. Clicki
   Examples:
   | sector                      |
   | Banking and finance         |
-  # | Business services           |
-  # | Government                  |
-  # | Academia                    |
-  # | Primary and utility         |
-  # | Charity                     |
-  # | International public sector |
-  # | NGO                         |
-  # | Consultancy                 |
-  # | Development                 |
-  # | Health                      |
-  # | Humanitarian                |
-  # | Other                       |
+  | Business services           |
+  | Government                  |
+  | Academia                    |
+  | Primary and utility         |
+  | Charity                     |
+  | International public sector |
+  | NGO                         |
+  | Consultancy                 |
+  | Development                 |
+  | Health                      |
+  | Humanitarian                |
+  | Other                       |
