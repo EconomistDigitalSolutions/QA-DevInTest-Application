@@ -4,13 +4,20 @@
   "description": "Application for accessing DevInTest candidates",
   "main": "index.js",
   "dependencies": {
-    "chromedriver": "^2.45.0",
+    "chai": "^4.2.0",
+    "chromedriver": "^74.0.0",
     "cucumber": "^5.1.0",
-    "selenium-webdriver": "^4.0.0-alpha.1"
+    "cucumber-html-reporter": "^4.0.5",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "sprintf-js": "^1.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
   "scripts": {
-    "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast"
+    "test": "node node_modules/cucumber/bin/cucumber-js --fail-fast",
+    "test:report": "node node_modules/cucumber/bin/cucumber-js --fail-fast -f json:report.json && node reporter.js",
+    "lint": "node node_modules/eslint/bin/eslint . --max-warnings=0"
   },
   "repository": {
     "type": "git",
