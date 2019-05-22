@@ -63,3 +63,7 @@ typings/
 # report files
 report\.cucumber
 report/
+
+#Idea
+# file: ~/.gitignore_global
+.idea
