@@ -4,7 +4,7 @@ const World = require('../support/world');
 
 Given(/^I go to the jobs page$/, () => World.goToJobsPage());
 
-//Home.feature functions
+//home.feature functions
 
 Then(/^I should see the navigation bar$/, async () => {
   return World.driver.findElement(By.id('primary-nav'));
@@ -109,7 +109,7 @@ Then (/^I should see the Advertise with us Page/, async () =>{
   });
 })
 
-//signInCreate Feature
+//signInCreate.feature functions
 When (/^I click the Create Account link$/, async () =>{
   return World.driver.findElement(By.linkText('Create account')).click();
 })
@@ -129,6 +129,67 @@ Then (/^I should see the Register Page/, async () =>{
 Then (/^I should see the Log on Page$/, async () =>{
   return World.driver.getCurrentUrl().then((currentURL) => {
       if(currentURL != "https://jobs.economist.com/logon/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+//navbar.feature functions
+When (/^I click the Home link in the navbar$/, async () =>{
+  return World.driver.findElement(By.linkText('Home')).click();
+})
+
+When (/^I click the Find a job link in the navbar/, async () =>{
+  return World.driver.findElement(By.linkText('Find a job')).click();
+})
+
+When (/^I click the Job alerts link in the navbar$/, async () =>{
+  return World.driver.findElement(By.linkText('Job alerts')).click();
+})
+
+When (/^I click the Search recruiters link in the navbar$/, async () =>{
+  return World.driver.findElement(By.linkText('Search recruiters')).click();
+})
+
+When (/^I click the Jobs blog link in the navbar$/, async () =>{
+  return World.driver.findElement(By.linkText('Jobs blog')).click();
+})
+
+Then (/^I should be on the jobs page$/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+Then (/^I should be on the Find a job page$/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/jobs/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+Then (/^I should be on the Job alerts page$/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/newalert/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+Then (/^I should be on the recruiters page$/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/employers/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+Then (/^I should be on the job blog page$/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/careers/"){
         throw "URL is incorrect!"
       }
   });
