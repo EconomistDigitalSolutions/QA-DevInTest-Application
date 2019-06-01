@@ -1,8 +1,10 @@
-const { Given, Then } = require('cucumber');
+const { Given, Then, When } = require('cucumber');
 const { By } = require('selenium-webdriver');
 const World = require('../support/world');
 
 Given(/^I go to the jobs page$/, () => World.goToJobsPage());
+
+//Home.feature functions
 
 Then(/^I should see the navigation bar$/, async () => {
   return World.driver.findElement(By.id('primary-nav'));
@@ -41,4 +43,68 @@ Then (/^I should see the featured jobs/, async () =>{
 
 Then (/^I should see the footer$/, async () =>{
   return World.driver.findElement(By.tagName('footer'));
+})
+
+//footer.feature functions
+//When clicking a link...
+When (/^I click the About Us link in the footer$/, async () =>{
+  return World.driver.findElement(By.linkText('About Us')).click();
+})
+
+When (/^I click the Contact Us link in the footer$/, async () =>{
+  return World.driver.findElement(By.linkText('Contact Us')).click();
+})
+
+When (/^I click the Terms and Conditions link in the footer$/, async () =>{
+  return World.driver.findElement(By.linkText('Terms & Conditions')).click();
+})
+
+When (/^I click the Privacy Policy link in the footer$/, async () =>{
+  return World.driver.findElement(By.linkText('Privacy Policy')).click();
+})
+
+When (/^I click the Advertise with us link in the footer$/, async () =>{
+  return World.driver.findElement(By.linkText('Advertise with us')).click();
+})
+
+
+Then (/^I should see the About Us Page/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/about-us/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+
+Then (/^I should see the Contact Us Page/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/contact-us/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+Then (/^I should see the Terms and Conditions Page/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/terms-and-conditions/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+Then (/^I should see the Privacy Policy Page/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/privacy-policy/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+Then (/^I should see the Advertise with us Page/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://recruiters.jobs.economist.com/"){
+        throw "URL is incorrect!"
+      }
+  });
 })
