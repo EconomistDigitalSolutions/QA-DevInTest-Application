@@ -108,3 +108,28 @@ Then (/^I should see the Advertise with us Page/, async () =>{
       }
   });
 })
+
+//signInCreate Feature
+When (/^I click the Create Account link$/, async () =>{
+  return World.driver.findElement(By.linkText('Create account')).click();
+})
+
+When (/^I click the Sign In link$/, async () =>{
+  return World.driver.findElement(By.linkText('Sign in')).click();
+})
+
+Then (/^I should see the Register Page/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/register/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
+
+Then (/^I should see the Log on Page$/, async () =>{
+  return World.driver.getCurrentUrl().then((currentURL) => {
+      if(currentURL != "https://jobs.economist.com/logon/"){
+        throw "URL is incorrect!"
+      }
+  });
+})
