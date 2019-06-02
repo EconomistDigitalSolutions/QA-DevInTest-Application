@@ -2,6 +2,8 @@ Had to install newer chrome driver version.
 
 Use bricks to identify some sections.
 
+Many tests assumes that the links on https://jobs.economist.com/ are actually correct.
+
 Checks on sectors and search jobs are fairly naive, but get the job somewhat done:
   * Sectors.feature checks that the header at the top of the page is correct. Assumes page has loaded correctly if this is the case.
   * searchJob.feature just checks that the inputs are carried over and assumes page has loaded correctly if this is the case.
