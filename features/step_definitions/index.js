@@ -2,10 +2,15 @@ const { Given, Then, When } = require('cucumber');
 const { By } = require('selenium-webdriver');
 const World = require('../support/world');
 
+/**
+* Code organised as:
+*   Tests for: home.feature -> footer.feature -> signinCreate.feature -> navbar.feature -> sectors.feature -> searchJob.feature
+*     For each feature order code written in is: Given, When, Then
+*/
+
 Given(/^I go to the jobs page$/, () => World.goToJobsPage());
 
 //home.feature functions
-
 Then(/^I should see the navigation bar$/, async () => {
   return World.driver.findElement(By.id('primary-nav'));
 })
@@ -212,6 +217,7 @@ When(/^I click the view details button$/, async() =>{
     return World.driver.findElement(By.className('button--lister-view-details')).click();
 });
 
+//Thens just check that the header at the top of the page is correct. Assumes page has loaded correctly if this is the case.
 Then (/^I should see the development search page$/, async() =>{
   return World.driver.findElement(By.id('browsing')).getText().then((headerText) => {
     if(headerText != 'Development jobs'){
@@ -253,6 +259,7 @@ When (/^I click the search button$/, async () =>{
   return World.driver.findElement(By.className('submit')).click()
 })
 
+//Thens just check that the inputs are carried over and assumes page has loaded correctly if this is the case.
 Then (/^I should see the search jobs page displaying only research jobs$/, async () =>{
   return World.driver.findElement(By.id('keyword')).getAttribute('value').then((jobText) => {
     if(jobText != 'research'){
