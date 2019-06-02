@@ -194,3 +194,48 @@ Then (/^I should be on the job blog page$/, async () =>{
       }
   });
 })
+
+//sectors.feature function
+When (/^I click development sector link$/, async () =>{
+  return World.driver.findElement(By.linkText('Development')).click();
+})
+
+When (/^I click government sector link$/, async () =>{
+  return World.driver.findElement(By.linkText('Government')).click();
+})
+
+When (/^I click banking and finance sector link$/, async () =>{
+  return World.driver.findElement(By.linkText('Banking and finance')).click();
+})
+
+When(/^I click the view details button$/, async() =>{
+    return World.driver.findElement(By.className('button--lister-view-details')).click();
+});
+
+Then (/^I should see the development search page$/, async() =>{
+  return World.driver.findElement(By.id('browsing')).getText().then((headerText) => {
+    if(headerText != 'Development jobs'){
+      throw "Incorrect header - likely incorrect page!"
+    }
+  });
+})
+
+Then (/^I should see the government search page$/, async() =>{
+  return World.driver.findElement(By.id('browsing')).getText().then((headerText) => {
+    if(headerText != 'Government jobs'){
+      throw "Incorrect header - likely incorrect page!"
+    }
+  });
+})
+
+Then (/^I should see the banking and finance search page$/, async() =>{
+  return World.driver.findElement(By.id('browsing')).getText().then((headerText) => {
+    if(headerText != 'Banking and finance jobs'){
+      throw "Incorrect header - likely incorrect page!"
+    }
+  });
+})
+
+Then (/^I should see an apply button$/, async() =>{
+  return World.driver.findElement(By.className('button--apply'));
+})
