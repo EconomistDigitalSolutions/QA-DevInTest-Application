@@ -239,3 +239,32 @@ Then (/^I should see the banking and finance search page$/, async() =>{
 Then (/^I should see an apply button$/, async() =>{
   return World.driver.findElement(By.className('button--apply'));
 })
+
+//searchJob.feature
+When (/^I enter research into the keywords field$/, async () =>{
+  return World.driver.findElement(By.id('keywords')).sendKeys('research');
+})
+
+When (/^I enter UK into the location field$/, async () =>{
+  return World.driver.findElement(By.id('location')).sendKeys('UK');
+})
+
+When (/^I click the search button$/, async () =>{
+  return World.driver.findElement(By.className('submit')).click()
+})
+
+Then (/^I should see the search jobs page displaying only research jobs$/, async () =>{
+  return World.driver.findElement(By.id('keyword')).getAttribute('value').then((jobText) => {
+    if(jobText != 'research'){
+      throw "Incorrect value - display may be incorrect! Actual value is " + jobText
+    }
+  });
+})
+
+Then (/^I should see the search jobs page displaying only jobs in the UK$/, async () =>{
+  return World.driver.findElement(By.id('location')).getAttribute('value').then((locationText) => {
+    if(locationText != 'United Kingdom'){
+      throw "Incorrect value - display may be incorrect! Actual value is " + locationText
+    }
+  });
+})
